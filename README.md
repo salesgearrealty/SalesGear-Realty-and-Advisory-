@@ -1,4 +1,3 @@
-# SalesGear-Realty-and-Advisory-
 {
   "name": "salesgear-realty",
   "version": "1.0.0",
@@ -27,13 +26,13 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3"
   }
-}import "./globals.css";
+}
+import "./globals.css";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
+export const meta Metadata = {
   title: "SalesGear Realty & Advisory",
-  description:
-    "Pune's Trusted Sole Selling & Mandate Partner. From Inventory to Sold Out.",
+  description: "Pune's Trusted Sole Selling & Mandate Partner. From Inventory to Sold Out.",
 };
 
 export default function RootLayout({
@@ -48,7 +47,6 @@ export default function RootLayout({
   );
 }
 /* Reset */
-
 * {
   margin: 0;
   padding: 0;
@@ -56,13 +54,11 @@ export default function RootLayout({
 }
 
 /* Smooth Scroll */
-
 html {
   scroll-behavior: smooth;
 }
 
 /* Body */
-
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #f8fbff;
@@ -71,7 +67,6 @@ body {
 }
 
 /* Headings */
-
 h1,
 h2,
 h3,
@@ -84,14 +79,12 @@ p {
 }
 
 /* Links */
-
 a {
   text-decoration: none;
   color: inherit;
 }
 
 /* Buttons */
-
 button {
   transition: 0.3s ease;
 }
@@ -102,13 +95,11 @@ button:hover {
 }
 
 /* Section */
-
 section {
   width: 100%;
 }
 
 /* Container */
-
 .container {
   width: 90%;
   max-width: 1200px;
@@ -116,11 +107,10 @@ section {
 }
 
 /* Cards */
-
 .card {
   background: white;
   border-radius: 18px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
   padding: 30px;
   transition: 0.3s;
 }
@@ -130,9 +120,8 @@ section {
 }
 
 /* Blue Button */
-
 .btn-primary {
-  background: #0F4CDB;
+  background: #0f4cdb;
   color: white;
   padding: 14px 28px;
   border-radius: 10px;
@@ -141,9 +130,8 @@ section {
 }
 
 /* Orange Button */
-
 .btn-secondary {
-  background: #F97316;
+  background: #f97316;
   color: white;
   padding: 14px 28px;
   border-radius: 10px;
@@ -152,27 +140,23 @@ section {
 }
 
 /* Footer */
-
 footer {
   margin-top: 50px;
 }
 
 /* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px !important;
+  }
 
-@media (max-width:768px){
+  h2 {
+    font-size: 28px !important;
+  }
 
-h1{
-font-size:36px !important;
-}
-
-h2{
-font-size:28px !important;
-}
-
-p{
-font-size:16px !important;
-}
-
+  p {
+    font-size: 16px !important;
+  }
 }
 "use client";
 
@@ -250,38 +234,32 @@ export default function Services() {
   const services = [
     {
       title: "Exclusive Sales Mandate",
-      description:
-        "Complete sales management for residential and commercial projects.",
+      description: "Complete sales management for residential and commercial projects.",
       icon: "🏢",
     },
     {
       title: "Project Launch Strategy",
-      description:
-        "Launch planning, pricing strategy and market positioning.",
+      description: "Launch planning, pricing strategy and market positioning.",
       icon: "🚀",
     },
     {
       title: "Digital Marketing",
-      description:
-        "Meta Ads, Google Ads, social media campaigns and lead generation.",
+      description: "Meta Ads, Google Ads, social media campaigns and lead generation.",
       icon: "📱",
     },
     {
       title: "Channel Partner Network",
-      description:
-        "Strong CP network across Pune for faster inventory movement.",
+      description: "Strong CP network across Pune for faster inventory movement.",
       icon: "🤝",
     },
     {
       title: "Dedicated Sales Team",
-      description:
-        "Professional site sales team with CRM and reporting.",
+      description: "Professional site sales team with CRM and reporting.",
       icon: "👥",
     },
     {
       title: "CRM & Sales Reporting",
-      description:
-        "Daily MIS, enquiry tracking and booking reports.",
+      description: "Daily MIS, enquiry tracking and booking reports.",
       icon: "📊",
     },
   ];
@@ -318,9 +296,60 @@ export default function Services() {
             fontSize: "18px",
           }}
         >
-          End-to-End Sales & Marketing Solutions for Real Estate 
-          <Services />
-          export default function Stats() {
+          End-to-End Sales & Marketing Solutions for Real Estate
+        </p>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
+            gap: "30px",
+          }}
+        >
+          {services.map((service, index) => (
+            <div
+              key={index}
+              style={{
+                background: "#fff",
+                padding: "35px",
+                borderRadius: "18px",
+                boxShadow: "0 12px 30px rgba(0,0,0,0.08)",
+                textAlign: "center",
+              }}
+            >
+              <div
+                style={{
+                  fontSize: "48px",
+                  marginBottom: "15px",
+                }}
+              >
+                {service.icon}
+              </div>
+
+              <h3
+                style={{
+                  color: "#0F4CDB",
+                  marginBottom: "10px",
+                }}
+              >
+                {service.title}
+              </h3>
+
+              <p
+                style={{
+                  color: "#555",
+                }}
+              >
+                {service.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+export default function Stats() {
   const stats = [
     {
       value: "₹500+ Cr",
@@ -416,7 +445,7 @@ export default function Services() {
       </div>
     </section>
   );
-} ji
+}
 export default function Projects() {
   const projects = [
     {
@@ -548,7 +577,8 @@ export default function Projects() {
       </div>
     </section>
   );
-}export default function Contact() {
+}
+export default function Contact() {
   return (
     <section
       style={{
@@ -756,4 +786,22 @@ export default function Footer() {
       </div>
 
       <hr
-      
+        style={{
+          borderColor: "rgba(255,255,255,0.1)",
+          margin: "40px auto 20px",
+        }}
+      />
+
+      <p
+        style={{
+          textAlign: "center",
+          color: "#d1d5db",
+          fontSize: "14px",
+        }}
+      >
+        &copy; {new Date().getFullYear()} SalesGear Realty & Advisory. All
+        rights reserved.
+      </p>
+    </footer>
+  );
+}
